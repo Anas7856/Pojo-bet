@@ -141,41 +141,116 @@ const menuData = {
   ],
 };
 
+// Track current active menu
+let currentActiveMenu = null;
+
 // Function to check if we're on mobile
 function isMobile() {
   return window.innerWidth <= 768;
 }
 
+// Function to populate mega menu
+function populateMegaMenu(type) {
+  megaMenu.innerHTML = menuData[type]
+    .map(
+      (x) =>
+        `<div class="mega-item">
+          <img src="${x.img}" alt="${x.name}">
+          <span>${x.name}</span>
+        </div>`
+    )
+    .join("");
+}
+
+// Function to remove active class from all menu items
+function removeAllActiveClasses() {
+  menuItems.forEach((item) => item.classList.remove("active"));
+}
+
+// Function to show mega menu
+function showMegaMenu(item, type) {
+  populateMegaMenu(type);
+  megaMenu.classList.add("show-menu");
+  item.classList.add("active");
+  currentActiveMenu = type;
+}
+
+// Function to hide mega menu
+function hideMegaMenu() {
+  megaMenu.classList.remove("show-menu");
+  removeAllActiveClasses();
+  currentActiveMenu = null;
+}
+
 // Initialize event listeners
 function initMegaMenu() {
   menuItems.forEach((item) => {
-    item.addEventListener("mouseenter", (e) => {
-      // Don't show mega menu on mobile
-      if (isMobile()) return;
+    const type = item.getAttribute("data-target");
 
-      const type = item.getAttribute("data-target");
-      megaMenu.innerHTML = menuData[type]
-        .map(
-          (x) =>
-            `<div class="mega-item"><img src="${x.img}"><span>${x.name}</span></div>`
-        )
-        .join("");
-
-      megaMenu.classList.add("show-menu");
+    // Desktop: Hover behavior
+    item.addEventListener("mouseenter", () => {
+      if (!isMobile()) {
+        removeAllActiveClasses();
+        showMegaMenu(item, type);
+      }
     });
 
-    // For touch devices, prevent default on mobile
+    // Mobile: Click behavior
+    item.addEventListener("click", (e) => {
+      if (isMobile()) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        // If clicking the same menu item, toggle it
+        if (currentActiveMenu === type) {
+          hideMegaMenu();
+        } else {
+          removeAllActiveClasses();
+          showMegaMenu(item, type);
+        }
+      }
+    });
+
+    // Prevent default touch behavior on mobile
     item.addEventListener("touchstart", (e) => {
       if (isMobile()) {
-        e.preventDefault(); // Prevent mega menu from opening on mobile
+        e.stopPropagation();
       }
     });
   });
 
+  // Desktop: Mouse leave behavior
   document.querySelector(".second-nav").addEventListener("mouseleave", () => {
-    // Only hide if not on mobile
     if (!isMobile()) {
-      megaMenu.classList.remove("show-menu");
+      hideMegaMenu();
+    }
+  });
+
+  // Mobile: Click outside to close
+  document.addEventListener("click", (e) => {
+    if (isMobile()) {
+      const isClickInsideNav = e.target.closest(".second-nav");
+      const isClickInsideMegaMenu = e.target.closest(".mega-menu");
+
+      if (!isClickInsideNav && !isClickInsideMegaMenu) {
+        hideMegaMenu();
+      }
+    }
+  });
+
+  // Also handle touch events for mobile
+  document.addEventListener("touchstart", (e) => {
+    if (isMobile()) {
+      const isClickInsideNav = e.target.closest(".second-nav");
+      const isClickInsideMegaMenu = e.target.closest(".mega-menu");
+
+      if (
+        !isClickInsideNav &&
+        !isClickInsideMegaMenu &&
+        megaMenu.classList.contains("show-menu")
+      ) {
+        hideMegaMenu();
+      }
     }
   });
 }
@@ -183,12 +258,14 @@ function initMegaMenu() {
 // Initialize on load
 initMegaMenu();
 
-// Optional: Update on resize to ensure correct behavior
+// Handle resize
+let resizeTimer;
 window.addEventListener("resize", function () {
-  // Hide mega menu if it's open when resizing to mobile
-  if (isMobile() && megaMenu.classList.contains("show-menu")) {
-    megaMenu.classList.remove("show-menu");
-  }
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(function () {
+    // If switching from desktop to mobile or vice versa, hide the menu
+    hideMegaMenu();
+  }, 250);
 });
 document.addEventListener("DOMContentLoaded", function () {
   // Slider functionality (existing code)
@@ -1104,13 +1181,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function updateCounter() {
     // Increase by random amount between 1000 and 10000 every 100ms
-    const increment = Math.floor(Math.random() * 9000) + 1000;
+    const increment = Math.floor(Math.random() * 9000) + 100;
     currentValue += increment;
     counterElement.textContent = formatNumber(currentValue);
   }
 
   // Update counter every 100ms for fast increase
-  setInterval(updateCounter, 100);
+  setInterval(updateCounter, 1000);
 });
 
 const menuToggle = document.getElementById("menuToggle");

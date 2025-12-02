@@ -6,6 +6,9 @@
 :root {
   --font-popin: "Poppins", sans-serif;
 }
+body {
+  overflow-x: hidden;
+}
 body .top-bar {
   height: 37px;
   width: 100%;
@@ -253,6 +256,7 @@ body .top-bar {
   height: 60px;
   align-items: center;
   justify-content: flex-start;
+  position: relative;
 }
 
 .second-nav-menu {
@@ -269,7 +273,6 @@ body .top-bar {
   gap: 3px;
   cursor: pointer;
   height: 100%;
-  display: flex;
   padding: 0px 10px;
   align-items: center;
   justify-content: center;
@@ -278,6 +281,7 @@ body .top-bar {
   height: 60px;
   font-size: 16px;
 }
+
 .menu-item img {
   height: 20px;
   width: 30px;
@@ -285,6 +289,11 @@ body .top-bar {
 }
 
 .menu-item:hover {
+  background-color: #640b5b;
+  font-weight: 600;
+}
+
+.menu-item.active {
   background-color: #640b5b;
   font-weight: 600;
 }
@@ -299,7 +308,7 @@ body .top-bar {
 
 /* Shared Mega Menu */
 .mega-menu {
-  position: absolute;
+  position: fixed;
   top: 185px;
   left: 50%;
   transform: translateX(-50%);
@@ -313,7 +322,7 @@ body .top-bar {
   z-index: 999999 !important;
   flex-wrap: wrap;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
-  /* border-radius: 8px; */
+  border-radius: 8px;
 }
 
 .mega-item {
@@ -338,8 +347,12 @@ body .top-bar {
   height: 100px;
   border-radius: 10px;
   object-fit: cover;
-  /* Responsive image sizing */
   transition: all 0.3s ease;
+}
+
+.mega-item span {
+  font-size: 14px;
+  font-weight: 500;
 }
 
 .show-menu {
@@ -368,9 +381,9 @@ body .top-bar {
   .mega-menu {
     width: 90%;
     top: 150px;
+    gap: 30px;
   }
 
-  /* Responsive mega menu images for tablet */
   .mega-item img {
     width: 120px;
     height: 80px;
@@ -382,30 +395,46 @@ body .top-bar {
   .second-nav {
     padding: 12px 20px;
     justify-content: flex-start;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+
+  .second-nav::-webkit-scrollbar {
+    height: 4px;
+  }
+
+  .second-nav::-webkit-scrollbar-thumb {
+    background: #ffffff50;
+    border-radius: 20px;
   }
 
   .second-nav-menu {
-    flex-wrap: wrap;
-    gap: 20px;
+    flex-wrap: nowrap;
+    gap: 15px;
   }
 
   .menu-item {
     font-size: 14px;
+    white-space: nowrap;
+    min-width: fit-content;
+    height: 50px;
   }
 
   .mega-menu {
-    width: 100%;
-    top: 140px;
-    left: 0;
-    transform: none;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    display: none;
-    padding: 10px;
+    position: fixed !important;
+    width: 95% !important;
+    top: 130px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    gap: 20px;
+    padding: 20px 15px;
+    max-height: 60vh;
+    overflow-y: auto;
+    border-radius: 8px;
   }
 
   .mega-menu::-webkit-scrollbar {
-    height: 6px;
+    width: 6px;
   }
 
   .mega-menu::-webkit-scrollbar-thumb {
@@ -414,64 +443,98 @@ body .top-bar {
   }
 
   .mega-item {
-    min-width: 100px;
-  }
-
-  /* Responsive mega menu images for mobile */
-  .mega-item img {
-    width: 100px;
-    height: 70px;
-  }
-
-  .mega-item {
-    min-width: 90px;
+    width: 120px;
+    min-width: 120px;
     gap: 8px;
+  }
+
+  .mega-item img {
+    width: 110px;
+    height: 75px;
+  }
+
+  .mega-item span {
+    font-size: 13px;
   }
 }
 
 /* Small Mobile (480px and below) */
 @media (max-width: 480px) {
   .second-nav {
-    padding: 10px;
+    overflow: hidden;
+
+    padding: 10px 15px;
   }
 
   .second-nav-menu {
-    gap: 12px;
-    justify-content: center;
+    gap: 10px;
   }
 
   .menu-item {
     font-size: 13px;
+    padding: 0px 8px;
+    height: 45px;
+  }
+
+  .menu-item img {
+    height: 18px;
+    width: 25px;
   }
 
   .mega-menu {
-    top: 120px;
-  }
-
-  /* Responsive mega menu images for small mobile */
-  .mega-item img {
-    width: 80px;
-    height: 55px;
+    width: 98% !important;
+    top: 190px !important;
+    gap: 15px;
+    padding: 15px 10px;
   }
 
   .mega-item {
-    min-width: 80px;
+    width: 100px;
+    min-width: 100px;
+    gap: 6px;
+  }
+
+  .mega-item img {
+    width: 95px;
+    height: 65px;
+  }
+
+  .mega-item span {
     font-size: 12px;
   }
 }
 
 /* Extra Small Mobile (360px and below) */
 @media (max-width: 360px) {
-  /* Responsive mega menu images for extra small mobile */
-  .mega-item img {
-    width: 70px;
-    height: 50px;
+  .second-nav {
+    overflow: hidden;
+    padding: 8px 10px;
+  }
+
+  .menu-item {
+    font-size: 12px;
+    padding: 0px 6px;
+    gap: 2px;
+  }
+
+  .mega-menu {
+    width: 98% !important;
+    gap: 12px;
+    top: 110px !important;
   }
 
   .mega-item {
-    min-width: 75px;
+    width: 85px;
+    min-width: 85px;
+  }
+
+  .mega-item img {
+    width: 80px;
+    height: 55px;
+  }
+
+  .mega-item span {
     font-size: 11px;
-    gap: 6px;
   }
 }
 /* hero */
@@ -1076,7 +1139,7 @@ body .top-bar {
 
 .game-card-item:hover .game-card-image img {
   transform: scale(1.1);
-  filter: blur(8px) brightness(0.5);
+  filter: blur(1px) brightness(0.5);
 }
 
 /* Card Overlay with Buttons */
@@ -1086,7 +1149,7 @@ body .top-bar {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1136,8 +1199,8 @@ body .top-bar {
 
 .game-demo-btn {
   background: transparent;
-  border-color: #000000;
-  color: #000000;
+  border-color: #ffffff;
+  color: #ffffff;
 }
 
 .game-demo-btn:hover {
@@ -1623,6 +1686,8 @@ body .top-bar {
 
 .games-ads-content img {
   width: 100%;
+  height: 220px;
+  object-fit: cover;
   border-radius: 20px;
   transition: 0.3s ease-in-out;
 }
@@ -1673,8 +1738,8 @@ body .top-bar {
 
 .carousel-track .col-4 {
   flex: 0 0 calc(33.333% - 20px);
-  min-width: calc(33.333% - 20px);
-  margin: 0 10px;
+  min-width: calc(33.333% - 5px);
+  margin: 0 0px;
 }
 
 /* ===== NEXT BUTTON (YOUR SVG) ===== */
@@ -1686,7 +1751,7 @@ body .top-bar {
   background: linear-gradient(270deg, #0e1224, #10152900 81.66%);
   border: none;
   width: 50px;
-  height: 180px;
+  height: 240px;
   cursor: pointer;
   display: flex;
   align-items: center;
