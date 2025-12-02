@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>POJO BET</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="menu-container">
+      <div class="menu-toggle" id="menuToggle">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+    </div>
+
+    <div class="icons-container" id="iconsContainer">
+      <div class="icon-box">
+        <img src="imgs/rtp.gif" alt="" />
+      </div>
+      <div class="icon-box">
+        <img src="imgs/whatsapp.gif" alt="" />
+      </div>
+      <div class="icon-box">
+        <img src="imgs/facebook.gif" alt="" />
+      </div>
+      <div class="icon-box">
+        <img src="imgs/telegam.gif" alt="" />
+      </div>
+      <div class="icon-box">
+        <img src="imgs/android.gif" alt="" />
+      </div>
+    </div>
+    <!-- topbar -->
+    <div class="top-bar">
+      <div class="top-bar-inner">
+        <i class="fa-solid fa-volume-high"></i>
+        <h5>
+          SELAMAT DATANG DI POJOKBET , SITUS BETINGAN NO 1 DI INDONESIA | PROSES
+          DEPOSIT DAN WITHDRAW TERCEPAT DAN TERAMAN! | POJOKBET TIDAK MENERIMA
+          DEPOSIT VIA EDC.
+        </h5>
+      </div>
+    </div>
+    <!-- topbar -->
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+      <div class="container-fluid px-4">
+        <!-- LOGO + DESKTOP DOWNLOAD BUTTON -->
+        <a class="navbar-brand d-flex align-items-center gap-3" href="#">
+          <img src="imgs/logo.gif" class="logo" />
+          <!-- Desktop only -->
+          <button class="btn btn-download d-none d-lg-flex">
+            <img src="imgs/icon.png" alt="" />
+            Download App
+          </button>
+        </a>
+
+        <!-- Toggle Button -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- NAV ITEMS -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto align-items-center">
+            <!-- MOBILE DOWNLOAD BUTTON (Only visible in dropdown) -->
+            <li class="nav-item d-lg-none">
+              <button class="btn btn-download w-100 my-2">
+                <img
+                  src="imgs/—Pngtree—cartoon android icon download_4706200.png"
+                  alt=""
+                />
+                Download App
+              </button>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#">Keluhan</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Promosi</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Referal</a>
+            </li>
+
+            <!-- HELP DROPDOWN -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                data-bs-toggle="dropdown"
+              >
+                Bantu <i class="fas fa-chevron-down"></i>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-custom">
+                <li>
+                  <a class="dropdown-item" href="#"
+                    ><i class="fas fa-phone"></i> Quick Contact</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    ><i class="fas fa-gamepad"></i> How to play</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    ><i class="fas fa-info-circle"></i> Info Center</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <!-- LANGUAGE -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                data-bs-toggle="dropdown"
+              >
+                <img src="https://flagcdn.com/w20/id.png" class="flag-icon" />
+                <i class="fas fa-chevron-down"></i>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-custom">
+                <li>
+                  <a class="dropdown-item"
+                    ><img src="https://flagcdn.com/w20/gb.png" /> English</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item"
+                    ><img src="https://flagcdn.com/w20/de.png" /> German</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item"
+                    ><img src="https://flagcdn.com/w20/id.png" /> Indonesia</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <!-- MOBILE LOGIN / REGISTER -->
+            <li class="nav-item d-lg-none">
+              <button class="btn btn-masuk w-100 my-2">Masuk</button>
+            </li>
+            <li class="nav-item d-lg-none">
+              <button class="btn btn-daftar w-100 my-2">Daftar</button>
+            </li>
+          </ul>
+
+          <!-- Desktop Login Buttons -->
+          <div class="d-none d-lg-flex align-items-center gap-3 ms-3">
+            <button class="btn btn-masuk">Masuk</button>
+            <button class="btn btn-daftar">Daftar</button>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- navbar -->
+    <!-- second nave -->
+    <nav class="second-nav">
+      <ul class="second-nav-menu">
+        <li class="menu-item" data-target="slots">
+          <i class="fas fa-coins"></i> Slots
+        </li>
+
+        <li class="menu-item" data-target="live">
+          <i class="fas fa-video"></i> Live <span class="badge-hot">LIVE</span>
+        </li>
+
+        <li class="menu-item" data-target="sports">
+          <i class="fas fa-futbol"></i> Olahraga
+        </li>
+
+        <li class="menu-item" data-target="casino">
+          <i class="fas fa-dice"></i> Kasino
+        </li>
+
+        <li class="menu-item" data-target="p2p">
+          <i class="fas fa-users"></i> P2P
+        </li>
+
+        <li class="menu-item" data-target="fish">
+          <i class="fas fa-bullseye"></i> Tembak Ikan
+        </li>
+      </ul>
+
+      <!-- SINGLE SHARED DROPDOWN -->
+      <div class="mega-menu" id="megaMenu"></div>
+    </nav>
+    <!-- second nave -->
+    <!-- hero -->
+    <section class="hero">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="slider-container">
+              <div class="slider">
+                <div class="slide active">
+                  <img src="imgs/h1.webp" alt="Slide 1" />
+                </div>
+                <div class="slide">
+                  <img src="imgs/h2.webp" alt="Slide 2" />
+                </div>
+                <div class="slide">
+                  <img src="imgs/h3.webp" alt="Slide 3" />
+                </div>
+                <div class="slide">
+                  <img src="imgs/h4.webp" alt="Slide 4" />
+                </div>
+                <div class="slide">
+                  <img src="imgs/a1.jpg" alt="Slide 5" />
+                </div>
+              </div>
+
+              <!-- Navigation dots -->
+              <div class="dots-container">
+                <span class="dot active" data-slide="0"></span>
+                <span class="dot" data-slide="1"></span>
+                <span class="dot" data-slide="2"></span>
+                <span class="dot" data-slide="3"></span>
+                <span class="dot" data-slide="4"></span>
+              </div>
+
+              <!-- Navigation arrows -->
+              <button class="slider-nav prev">&#10094;</button>
+              <button class="slider-nav next">&#10095;</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- hero -->
+    <!-- Game-cards -->
+    <section class="game-cards">
+      <div class="container">
+        <div class="section-header">
+          <h2>
+            Game Popular
+
+            <span>
+              <a href="">Lihat semua</a>
+            </span>
+          </h2>
+          <div class="navigation-buttons">
+            <button class="nav-btn next-btn">
+              <svg
+                fill="none"
+                height="54"
+                viewBox="0 0 54 54"
+                width="54"
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-4 h-4 lg:w-auto lg:h-auto"
+                q:key="Qk_0"
+                q:id="dd"
+              >
+                <mask
+                  height="54"
+                  id="mask0_76_802"
+                  maskUnits="userSpaceOnUse"
+                  style="mask-type: alpha"
+                  width="54"
+                  x="0"
+                  y="0"
+                >
+                  <rect fill="currentColor" height="54" width="54"></rect>
+                </mask>
+                <g mask="url(#mask0_76_802)">
+                  <path
+                    d="M13.6126 42.75L24.8626 27L13.6126 11.25H19.1251L30.3751 27L19.1251 42.75H13.6126ZM27.0001 42.75L38.2501 27L27.0001 11.25H32.5126L43.7626 27L32.5126 42.75H27.0001Z"
+                    fill="url(#paint0_linear_76_802)"
+                  ></path>
+                </g>
+                <defs>
+                  <linearGradient
+                    gradientUnits="userSpaceOnUse"
+                    id="paint0_linear_76_802"
+                    x1="31.0775"
+                    x2="31.0775"
+                    y1="46.4559"
+                    y2="4.30147"
+                  >
+                    <stop stop-color="currentColor"></stop>
+                    <stop offset="0.661458" stop-color="currentColor"></stop>
+                    <stop offset="0.739583" stop-color="currentColor"></stop>
+                    <stop offset="1" stop-color="currentColor"></stop>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="cards-scroll-container">
+          <div class="cards-row">
+            <!-- Row 1: First 12 cards -->
+            <div class="game-card">
+              <div class="card-image">
+                <img src="imgs/g1.webp" alt="What's the GREAT SAFARI" />
+                <div class="card-overlay">
+                  <button class="card-btn demo-btn">Demo</button>
+                  <button class="card-btn play-btn">Play</button>
+                </div>
+              </div>
+            </div>
+            <div class="game-card">
+              <div class="card-image">
+                <img src="imgs/g2.webp" alt="JILL" />
+                <div class="card-overlay">
+                  <button class="card-btn demo-btn">Demo</button>
+                  <button class="card-btn play-btn">Play</button>
+                </div>
+              </div>
+            </div>
+            <div class="game-card">
+              <div class="card-image">
+                <img src="imgs/g3.webp" alt="HISTORY" />
+                <div class="card-overlay">
+                  <button class="card-btn demo-btn">Demo</button>
+                  <button class="card-btn play-btn">Play</button>
+                </div>
+              </div>
+            </div>
+            <div class="game-card">
+              <div class="card-image">
+                <img src="imgs/g4.webp" alt="SIGAR CRUSH" />
+                <div class="card-overlay">
+                  <button class="card-btn demo-btn">Demo</button>
+                  <button class="card-btn play-btn">Play</button>
+                </div>
+              </div>
+            </div>
+            <div class="game-card">
+              <div class="card-image">
+                <img src="imgs/g5.webp" alt="MAMA TOTEM" />
+                <div class="card-overlay">
+                  <button class="card-btn demo-btn">Demo</button>
+                  <button class="card-btn play-btn">Play</button>
+                </div>
+              </div>
+            </div>
+            <div class="game-card">
+              <div class="card-image">
+                <img src="imgs/g6.webp" alt="BUFFALO BLITZ CASH COLLECT" />
+                <div class="card-overlay">
+                  <button class="card-btn demo-btn">Demo</button>
+                  <button class="card-btn play-btn">Play</button>
+                </div>
+              </div>
+            </div>
+            <div class="game-card">
+              <div class="card-image">
+                <img src="imgs/g7.webp" alt="Game 7" />
+                <div class="card-overlay">
+                  <button class="card-btn demo-btn">Demo</button>
+                  <button class="card-btn play-btn">Play</button>
+                </div>
+              </div>
+            </div>
+            <div class="game-card">
+              <div class="card-image">
+                <img src="imgs/g8.webp" alt="Game 8" />
+                <div class="card-overlay">
+                  <button class="card-btn demo-btn">Demo</button>
+                  <button class="card-btn play-btn">Play</button>
+                </div>
+              </div>
+            </div>
+            <div class="game-card">
+              <div class="card-image">
+                <img src="imgs/g9.webp" alt="Game 9" />
+                <div class="card-overlay">
+                  <button class="card-btn demo-btn">Demo</button>
+                  <button class="card-btn play-btn">Play</button>
+                </div>
+              </div>
+            </div>
+            <div class="game-card">
+              <div class="card-image">
+                <img src="imgs/g10.webp" alt="Game 10" />
+                <div class="card-overlay">
+                  <button class="card-btn demo-btn">Demo</button>
+                  <button class="card-btn play-btn">Play</button>
+                </div>
+              </div>
+            </div>
+            <div class="game-card">
+              <div class="card-image">
+                <img src="imgs/g11.webp" alt="Game 11" />
+                <div class="card-overlay">
+                  <button class="card-btn demo-btn">Demo</button>
+                  <button class="card-btn play-btn">Play</button>
+                </div>
+              </div>
+            </div>
+            <div class="game-card">
+              <div class="card-image">
+                <img src="imgs/g12.webp" alt="Game 12" />
+                <div class="card-overlay">
+                  <button class="card-btn demo-btn">Demo</button>
+                  <button class="card-btn play-btn">Play</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Row 2: Next 11 cards -->
+          <div class="cards-row">
+            <div class="game-card">
+              <div class="card-image">
+                <img src="imgs/g13.webp" alt="Game 13" />
+                <div class="card-overlay">
+                  <button class="card-btn demo-btn">Demo</button>
+                  <button class="card-btn play-btn">Play</button>
+                </div>
+              </div>
+            </div>
+            <div class="game-card">
+              <div class="card-image">
+                <img src="imgs/g14.webp" alt="Game 14" />
+                <div class="card-overlay">
+                  <button class="card-btn demo-btn">Demo</button>
+                  <button class="card-btn play-btn">Play</button>
+                </div>
+              </div>
+            </div>
+            <div class="game-card">
+              <div class="card-image">
+                <img src="imgs/g15.webp" alt="Game 15" />
+                <div class="card-overlay">
+                  <button class="card-btn demo-btn">Demo</button>
+                  <button class="card-btn play-btn">Play</button>
+                </div>
+              </div>
+            </div>
+            <div class="game-card">
+              <div class="card-image">
+                <img src="imgs/g16.webp" alt="Game 16" />
+                <div class="card-overlay">
+                  <button class="card-btn demo-btn">Demo</button>
+                  <button class="card-btn play-btn">Play</button>
+                </div>
+              </div>
+            </div>
+            <div class="game-card">
+              <div class="card-image">
+                <img src="imgs/g17.webp" alt="Game 17" />
+                <div class="card-overlay">
+                  <button class="card-btn demo-btn">Demo</button>
+                  <button class="card-btn play-btn">Play</button>
+                </div>
+              </div>
+            </div>
+            <div class="game-card">
+              <div class="card-image">
+                <img src="imgs/g9.webp" alt="Game 18" />
+                <div class="card-overlay">
+                  <button class="card-btn demo-btn">Demo</button>
+                  <button class="card-btn play-btn">Play</button>
+                </div>
+              </div>
+            </div>
+            <div class="game-card">
+              <div class="card-image">
+                <img src="imgs/g19.webp" alt="Game 19" />
+                <div class="card-overlay">
+                  <button class="card-btn demo-btn">Demo</button>
+                  <button class="card-btn play-btn">Play</button>
+                </div>
+              </div>
+            </div>
+            <div class="game-card">
+              <div class="card-image">
+                <img src="imgs/g2.webp" alt="Game 20" />
+                <div class="card-overlay">
+                  <button class="card-btn demo-btn">Demo</button>
+                  <button class="card-btn play-btn">Play</button>
+                </div>
+              </div>
+            </div>
+            <div class="game-card">
+              <div class="card-image">
+                <img src="imgs/g21.webp" alt="Game 21" />
+                <div class="card-overlay">
+                  <button class="card-btn demo-btn">Demo</button>
+                  <button class="card-btn play-btn">Play</button>
+                </div>
+              </div>
+            </div>
+            <div class="game-card">
+              <div class="card-image">
+                <img src="imgs/g22.webp" alt="Game 22" />
+                <div class="card-overlay">
+                  <button class="card-btn demo-btn">Demo</button>
+                  <button class="card-btn play-btn">Play</button>
+                </div>
+              </div>
+            </div>
+            <div class="game-card">
+              <div class="card-image">
+                <img src="imgs/g23.webp" alt="Game 23" />
+                <div class="card-overlay">
+                  <button class="card-btn demo-btn">Demo</button>
+                  <button class="card-btn play-btn">Play</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Game-cards -->
+    <!-- gameads -->
+    <section class="games-ads">
+      <div class="container">
+        <div class="games-ads-header">
+          <h1>Kasino Live Populer</h1>
+          <a href="">Lihat semua</a>
+        </div>
+        <div class="carousel-wrapper">
+          <div class="row carousel-track">
+            <div class="col-4">
+              <div class="games-ads-content">
+                <img src="imgs/ad1.avif" alt="" />
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="games-ads-content">
+                <img src="imgs/ad2.avif" alt="" />
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="games-ads-content">
+                <img src="imgs/ad3.avif" alt="" />
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="games-ads-content">
+                <img src="imgs/ad4.avif" alt="" />
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="games-ads-content">
+                <img src="imgs/ad5.avif" alt="" />
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="games-ads-content">
+                <img src="imgs/ad6.avif" alt="" />
+              </div>
+            </div>
+          </div>
+          <button class="carousel-btn carousel-btn-next">
+            <svg
+              fill="none"
+              height="54"
+              viewBox="0 0 54 54"
+              width="54"
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-4 h-4 lg:w-auto lg:h-auto"
+              q:key="Qk_0"
+              q:id="dd"
+            >
+              <mask
+                height="54"
+                id="mask0_76_802"
+                maskUnits="userSpaceOnUse"
+                style="mask-type: alpha"
+                width="54"
+                x="0"
+                y="0"
+              >
+                <rect fill="currentColor" height="54" width="54"></rect>
+              </mask>
+              <g mask="url(#mask0_76_802)">
+                <path
+                  d="M13.6126 42.75L24.8626 27L13.6126 11.25H19.1251L30.3751 27L19.1251 42.75H13.6126ZM27.0001 42.75L38.2501 27L27.0001 11.25H32.5126L43.7626 27L32.5126 42.75H27.0001Z"
+                  fill="url(#paint0_linear_76_802)"
+                ></path>
+              </g>
+              <defs>
+                <linearGradient
+                  gradientUnits="userSpaceOnUse"
+                  id="paint0_linear_76_802"
+                  x1="31.0775"
+                  x2="31.0775"
+                  y1="46.4559"
+                  y2="4.30147"
+                >
+                  <stop stop-color="currentColor"></stop>
+                  <stop offset="0.661458" stop-color="currentColor"></stop>
+                  <stop offset="0.739583" stop-color="currentColor"></stop>
+                  <stop offset="1" stop-color="currentColor"></stop>
+                </linearGradient>
+              </defs>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- gameads -->
+    <!-- jackpot-->
+    <section class="jack-pot">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="jack-pot-content">
+              <img src="imgs/jackpotimg.gif" alt="" />
+              <div class="jack-pot-content-content">
+                <h3 id="jackpot-counter">IDR 6,908,700,054</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- jackpot-->
+    <section class="reviews">
+      <div class="container">
+        <!-- Setoran Terbaru Section -->
+        <div class="review-block">
+          <div class="review-header yellow">
+            <h2>Setoran Terbaru</h2>
+          </div>
+          <div class="review-cards-wrapper">
+            <div class="review-card">
+              <div class="card-left">
+                <div class="review-time">in 5 hr.</div>
+              </div>
+              <div class="card-right">
+                <div class="review-icon">😊</div>
+                <div class="review-amount">IDR 50,000</div>
+              </div>
+            </div>
+            <div class="review-card">
+              <div class="card-left">
+                <div class="review-time">in 5 hr.</div>
+              </div>
+              <div class="card-right">
+                <div class="review-icon">😊</div>
+                <div class="review-amount">IDR 100,000</div>
+              </div>
+            </div>
+            <div class="review-card">
+              <div class="card-left">
+                <div class="review-time">in 5 hr.</div>
+              </div>
+              <div class="card-right">
+                <div class="review-icon">😊</div>
+                <div class="review-amount">IDR 100,000</div>
+              </div>
+            </div>
+            <div class="review-card">
+              <div class="card-left">
+                <div class="review-time">in 6 hr.</div>
+              </div>
+              <div class="card-right">
+                <div class="review-icon">😊</div>
+                <div class="review-amount">IDR 26,000</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pemenang Terbaru Section -->
+        <div class="review-block">
+          <div class="review-header orange">
+            <h2>Pemenang Terbaru</h2>
+          </div>
+          <div class="review-cards-wrapper">
+            <div class="review-card">
+              <div class="card-left">
+                <div class="review-time">in 4 hr.</div>
+              </div>
+              <div class="card-right">
+                <div class="review-icon">😊</div>
+                <div class="review-info">
+                  <div class="review-username">ren************</div>
+                  <div class="review-amount">IDR 53,000</div>
+                </div>
+              </div>
+            </div>
+            <div class="review-card">
+              <div class="card-left">
+                <div class="review-time">in 3 hr.</div>
+              </div>
+              <div class="card-right">
+                <div class="review-icon">😊</div>
+                <div class="review-info">
+                  <div class="review-username">muh************_</div>
+                  <div class="review-amount">IDR 500,000</div>
+                </div>
+              </div>
+            </div>
+            <div class="review-card">
+              <div class="card-left">
+                <div class="review-time">in 3 hr.</div>
+              </div>
+              <div class="card-right">
+                <div class="review-icon">😊</div>
+                <div class="review-info">
+                  <div class="review-username">san***</div>
+                  <div class="review-amount">IDR 200,000</div>
+                </div>
+              </div>
+            </div>
+            <div class="review-card">
+              <div class="card-left">
+                <div class="review-time">in 2 hr.</div>
+              </div>
+              <div class="card-right">
+                <div class="review-icon">😊</div>
+                <div class="review-info">
+                  <div class="review-username">ali*********</div>
+                  <div class="review-amount">IDR 630,000</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- contact -->
+    <section class="contact">
+      <div class="container-fluid">
+        <div class="row">
+          <!-- Promosi Column -->
+          <div class="col-lg-6 col-md-12">
+            <div class="contact-card">
+              <div class="contact-card-header">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                  <path d="M12 8v8M8 12h8"></path>
+                </svg>
+                <h3>Promosi</h3>
+              </div>
+              <div class="contact-card-body">
+                <!-- Promotion 1 -->
+                <div class="promotion-item">
+                  <img src="imgs/h3.webp" alt="Syarat dan Ketentuan" />
+                  <div class="promotion-content">
+                    <h4>SYARAT DAN KETENTUAN BERMAIN DI SITUS POJOKBET</h4>
+                    <p class="promotion-time">
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                      </svg>
+                      Berlaku untuk waktu yang tidak terbatas
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Promotion 2 -->
+                <div class="promotion-item">
+                  <img src="imgs/h2.webp" alt="Bonus Garansi" />
+                  <div class="promotion-content">
+                    <h4>BONUS GARANSI KEKALAHAN 100%</h4>
+                    <p class="promotion-time">
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                      </svg>
+                      Berlaku untuk waktu yang tidak terbatas
+                    </p>
+                  </div>
+                </div>
+
+                <button class="contact-btn">Lagi Promosi</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dukungan Pelanggan Column -->
+          <div class="col-lg-4 col-md-12">
+            <div class="contact-card">
+              <div class="contact-card-header">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
+                  ></path>
+                </svg>
+                <h3>Dukungan Pelanggan</h3>
+              </div>
+              <div class="contact-card-body">
+                <div class="support-item">
+                  <h5>Obrolan Langsung</h5>
+                </div>
+
+                <div class="support-item">
+                  <h5>WHATSAPP</h5>
+                  <a href="https://wa.me/6283846084260" class="support-link"
+                    >6283846084260</a
+                  >
+                </div>
+
+                <div class="support-item">
+                  <h5>FACEBOOK</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-12">
+            <div class="contact-card">
+              <div class="contact-card-header">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                  <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                </svg>
+                <h3>FAQ</h3>
+              </div>
+              <div class="contact-card-body">
+                <div class="faq-item">
+                  <a href="#">Cara Melakukan Deposit</a>
+                </div>
+
+                <div class="faq-item">
+                  <a href="#">Cara Melakukan Penarikan</a>
+                </div>
+
+                <div class="faq-item">
+                  <a href="#">Cara Bermain SportsBook</a>
+                </div>
+                <a class="contact-link" href="#">Cara Bermain SportsBook</a>
+
+                <button class="contact-btn">Lagi FAQ</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- contact -->
+    <!-- footer -->
+    <section class="footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="row">
+            <!-- Informasi Column -->
+            <div class="col-lg-2 col-md-6 col-sm-6">
+              <div class="footer-column">
+                <h4>Informasi</h4>
+                <ul>
+                  <li><a href="#">Tentang kami</a></li>
+                  <li><a href="#">Program Afiliasi</a></li>
+                  <li><a href="#">Permainan yang Bertanggung Jawab</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Bantu Column -->
+            <div class="col-lg-2 col-md-6 col-sm-6">
+              <div class="footer-column">
+                <h4>Bantu</h4>
+                <ul>
+                  <li><a href="#">Dukungan 24/7</a></li>
+                  <li><a href="#">FAQ</a></li>
+                  <li><a href="#">Hubungi kami</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-6 col-sm-6">
+              <div class="footer-column">
+                <h4>Cara Pembayaran</h4>
+                <div class="payment-methods">
+                  <img src="imgs/f1.webp" alt="BCA" />
+                  <img src="imgs/f2.webp" alt="BCA" />
+                  <img src="imgs/f3.webp" alt="BCA" />
+                  <img src="imgs/f4.webp" alt="BCA" />
+                </div>
+              </div>
+            </div>
+            <!-- Syarat & Ketentuan Column -->
+            <div class="col-lg-2 col-md-6 col-sm-6">
+              <div class="footer-column">
+                <h4>Syarat & Ketentuan</h4>
+                <ul>
+                  <li><a href="#">Perjanjian Pengguna</a></li>
+                  <li><a href="#">Kebijakan pribadi</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6">
+              <div class="social-section">
+                <div class="footer-logo">
+                  <img src="imgs/logo.gif" alt="POJOKBET" />
+                </div>
+                <div class="social-links">
+                  <span>Ikuti kami</span>
+                  <a href="#" class="social-icon">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                    >
+                      <path
+                        d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                      />
+                    </svg>
+                  </a>
+                  <a href="#" class="social-icon">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                    >
+                      <path
+                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+                      />
+                    </svg>
+                  </a>
+                  <a href="#" class="social-icon">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                    >
+                      <path
+                        d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.18-.357.223-.548.223l.188-2.85 5.18-4.68c.223-.198-.054-.308-.346-.11l-6.4 4.02-2.76-.918c-.6-.187-.612-.6.125-.89l10.782-4.156c.5-.18.943.11.78.89z"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Cara Pembayaran Column -->
+          </div>
+        </div>
+
+        <!-- Platform & Social Section -->
+
+        <!-- Providers Section -->
+        <div class="footer-providers">
+          <div class="providers-grid">
+            <img src="imgs/footer1.webp" alt="" />
+          </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+          <p>©2025 . Seluruh hak cipta dilindungi | 18+ | V1.78</p>
+        </div>
+      </div>
+    </section>
+    <!-- footer -->
+    <!-- script -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+    <!-- script -->
+  </body>
+</html>
