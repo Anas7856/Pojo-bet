@@ -257,7 +257,7 @@ body .top-bar {
 
 .second-nav-menu {
   display: flex;
-  gap: 20px;
+  gap: 10px;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -266,7 +266,7 @@ body .top-bar {
 .menu-item {
   color: white;
   display: flex;
-  gap: 8px;
+  gap: 3px;
   cursor: pointer;
   height: 100%;
   display: flex;
@@ -277,6 +277,11 @@ body .top-bar {
   transition: 0.3s;
   height: 60px;
   font-size: 16px;
+}
+.menu-item img {
+  height: 20px;
+  width: 30px;
+  margin: 0px 0px;
 }
 
 .menu-item:hover {
@@ -303,9 +308,9 @@ body .top-bar {
   background: linear-gradient(180deg, #b5058e 0%, #0c168a 100%) !important;
   padding: 15px;
   display: none;
-  gap: 15px;
+  gap: 45px;
   justify-content: center;
-  z-index: 999999;
+  z-index: 999999 !important;
   flex-wrap: wrap;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
   /* border-radius: 8px; */
@@ -333,6 +338,8 @@ body .top-bar {
   height: 100px;
   border-radius: 10px;
   object-fit: cover;
+  /* Responsive image sizing */
+  transition: all 0.3s ease;
 }
 
 .show-menu {
@@ -346,6 +353,7 @@ body .top-bar {
 /* Tablet (1024px and below) */
 @media (max-width: 1024px) {
   .second-nav {
+    height: fit-content !important;
     padding: 0px 35px;
   }
 
@@ -360,6 +368,12 @@ body .top-bar {
   .mega-menu {
     width: 90%;
     top: 150px;
+  }
+
+  /* Responsive mega menu images for tablet */
+  .mega-item img {
+    width: 120px;
+    height: 80px;
   }
 }
 
@@ -402,6 +416,17 @@ body .top-bar {
   .mega-item {
     min-width: 100px;
   }
+
+  /* Responsive mega menu images for mobile */
+  .mega-item img {
+    width: 100px;
+    height: 70px;
+  }
+
+  .mega-item {
+    min-width: 90px;
+    gap: 8px;
+  }
 }
 
 /* Small Mobile (480px and below) */
@@ -422,8 +447,33 @@ body .top-bar {
   .mega-menu {
     top: 120px;
   }
+
+  /* Responsive mega menu images for small mobile */
+  .mega-item img {
+    width: 80px;
+    height: 55px;
+  }
+
+  .mega-item {
+    min-width: 80px;
+    font-size: 12px;
+  }
 }
 
+/* Extra Small Mobile (360px and below) */
+@media (max-width: 360px) {
+  /* Responsive mega menu images for extra small mobile */
+  .mega-item img {
+    width: 70px;
+    height: 50px;
+  }
+
+  .mega-item {
+    min-width: 75px;
+    font-size: 11px;
+    gap: 6px;
+  }
+}
 /* hero */
 /* hero */
 /* hero */
@@ -434,28 +484,6 @@ body .top-bar {
   overflow: hidden;
   padding: 0px 100px;
 }
-
-/* .container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-  height: 100%;
-}
-
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0 -15px;
-  height: 100%;
-}
-
-.col-12 {
-  flex: 0 0 100%;
-  max-width: 100%;
-  padding: 0 15px;
-  height: 100%;
-} */
 
 /* Slider styles */
 .slider-container {
@@ -652,12 +680,21 @@ body .top-bar {
 /* Mobile Large */
 @media (max-width: 576px) {
   .hero {
-    height: fit-content !important;
+    height: 35vh !important;
+    min-height: 220px !important;
     padding: 0px !important;
   }
+
+  .carousel-item {
+    height: 35vh !important;
+    min-height: 220px !important;
+  }
+
   .carousel-item img {
     height: 100% !important;
+    object-fit: cover !important;
   }
+
   .container {
     padding: 0 10px;
   }
@@ -693,17 +730,18 @@ body .top-bar {
     bottom: 12px;
     gap: 5px;
   }
-
-  .slide img {
-    object-fit: contain;
-  }
 }
 
 /* Mobile Medium */
 @media (max-width: 480px) {
   .hero {
-    height: 32vh;
-    min-height: 260px;
+    height: 32vh !important;
+    min-height: 200px !important;
+  }
+
+  .carousel-item {
+    height: 32vh !important;
+    min-height: 200px !important;
   }
 
   .container {
@@ -746,8 +784,13 @@ body .top-bar {
 /* Mobile Small */
 @media (max-width: 360px) {
   .hero {
-    height: 30vh;
-    min-height: 240px;
+    height: 30vh !important;
+    min-height: 180px !important;
+  }
+
+  .carousel-item {
+    height: 30vh !important;
+    min-height: 180px !important;
   }
 
   .slider-container {
@@ -781,8 +824,13 @@ body .top-bar {
 /* Landscape Mode for Mobile */
 @media (max-height: 500px) and (orientation: landscape) {
   .hero {
-    height: 85vh;
-    min-height: 300px;
+    height: 85vh !important;
+    min-height: 300px !important;
+  }
+
+  .carousel-item {
+    height: 85vh !important;
+    min-height: 300px !important;
   }
 
   .slide img {
@@ -802,8 +850,13 @@ body .top-bar {
 /* Very Small Devices in Landscape */
 @media (max-height: 400px) and (orientation: landscape) {
   .hero {
-    height: 90vh;
-    min-height: 250px;
+    height: 90vh !important;
+    min-height: 250px !important;
+  }
+
+  .carousel-item {
+    height: 90vh !important;
+    min-height: 250px !important;
   }
 
   .slider-nav {
@@ -848,7 +901,6 @@ body .top-bar {
     height: 14px;
   }
 }
-
 /* Landscape orientation for mobile */
 
 /* High-resolution displays */
@@ -913,7 +965,7 @@ body .top-bar {
   top: 30px;
   height: 500px;
   right: 0px;
-  z-index: 999999;
+  z-index: 999;
   padding: 0 20px;
   background: transparent;
   pointer-events: none;
@@ -1488,7 +1540,7 @@ body .top-bar {
 
 @media (max-width: 575px) {
   .game-cards-section {
-    padding: 20px 15px !important;
+    padding: 20px 0px !important;
   }
 
   .game-card-item {
@@ -2275,11 +2327,11 @@ body .top-bar {
   }
 
   .payment-methods {
-    max-width: 180px;
+    width: 120px;
   }
 
   .payment-methods img {
-    height: 35px;
+    height: fit-content;
   }
 
   .social-section {
@@ -2291,10 +2343,11 @@ body .top-bar {
   .providers-grid {
     grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
     gap: 10px;
+    display: none;
   }
 
   .providers-grid img {
-    max-width: 70px;
+    width: 100%;
     height: 30px;
   }
 }

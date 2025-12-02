@@ -1,4 +1,5 @@
 const megaMenu = document.getElementById("megaMenu");
+const menuItems = document.querySelectorAll(".menu-item");
 
 const menuData = {
   slots: [
@@ -6,36 +7,25 @@ const menuData = {
     { img: "imgs/m2.webp", name: "Habanero" },
     { img: "imgs/m3.webp", name: "PG Soft" },
     { img: "imgs/m4.webp", name: "PG Soft" },
-
     { img: "imgs/m5.webp", name: "PG Soft" },
-
     { img: "imgs/m6.webp", name: "PG Soft" },
     { img: "imgs/m7.webp", name: "PG Soft" },
     { img: "imgs/m8.webp", name: "PG Soft" },
-
     { img: "imgs/m9.webp", name: "PG Soft" },
-
     { img: "imgs/m10.webp", name: "PG Soft" },
     { img: "imgs/m11.webp", name: "PG Soft" },
-
     { img: "imgs/m12.webp", name: "PG Soft" },
-
     { img: "imgs/m13.webp", name: "PG Soft" },
     { img: "imgs/m14.webp", name: "PG Soft" },
-
     { img: "imgs/m15.webp", name: "PG Soft" },
-
     { img: "imgs/m21.webp", name: "PG Soft" },
     { img: "imgs/m22.webp", name: "PG Soft" },
-
     { img: "imgs/m2.webp", name: "PG Soft" },
     { img: "imgs/m19.webp", name: "PG Soft" },
     { img: "imgs/m20.webp", name: "PG Soft" },
     { img: "imgs/m23.webp", name: "PG Soft" },
     { img: "imgs/m24.webp", name: "PG Soft" },
-
     { img: "imgs/m22.webp", name: "PG Soft" },
-
     { img: "imgs/m26.webp", name: "PG Soft" },
     { img: "imgs/m27.webp", name: "PG Soft" },
     { img: "imgs/m28.webp", name: "PG Soft" },
@@ -50,40 +40,155 @@ const menuData = {
     { img: "imgs/l4.webp", name: "XPG" },
     { img: "imgs/l5.webp", name: "XPG" },
     { img: "imgs/l6.webp", name: "XPG" },
-
-    { img: "imgs/l7.webp", name: "XPG" },
-
     { img: "imgs/l8.webp", name: "XPG" },
-
     { img: "imgs/l13.webp", name: "XPG" },
-    { img: "imgs/l10.webp", name: "XPG" },
-
     { img: "imgs/l15.webp", name: "XPG" },
-
     { img: "imgs/l12.webp", name: "XPG" },
+    { img: "imgs/n1.webp", name: "XPG" },
+    { img: "imgs/n2.webp", name: "XPG" },
+    { img: "imgs/n3.webp", name: "XPG" },
+    { img: "imgs/n4.webp", name: "XPG" },
   ],
-  sports: [{ img: "imgs/demo3.png", name: "SBO Bet" }],
-  casino: [{ img: "imgs/demo1.png", name: "Roulette" }],
-  p2p: [{ img: "imgs/demo2.png", name: "Poker" }],
-  fish: [{ img: "imgs/demo6.png", name: "Fishing World" }],
+  sports: [
+    { img: "imgs/s1.webp", name: "SBO Bet" },
+    { img: "imgs/s2.webp", name: "SBO Bet" },
+    { img: "imgs/s3.webp", name: "SBO Bet" },
+    { img: "imgs/s4.webp", name: "SBO Bet" },
+    { img: "imgs/s5.webp", name: "SBO Bet" },
+    { img: "imgs/s6.webp", name: "SBO Bet" },
+  ],
+  casino: [
+    { img: "imgs/k1.webp", name: "SBO Bet" },
+    { img: "imgs/k2.webp", name: "SBO Bet" },
+    { img: "imgs/k3.webp", name: "SBO Bet" },
+    { img: "imgs/k4.webp", name: "SBO Bet" },
+    { img: "imgs/k5.webp", name: "SBO Bet" },
+    { img: "imgs/k6.webp", name: "SBO Bet" },
+    { img: "imgs/k7.webp", name: "SBO Bet" },
+    { img: "imgs/k8.webp", name: "SBO Bet" },
+    { img: "imgs/k9.webp", name: "SBO Bet" },
+    { img: "imgs/k10.webp", name: "SBO Bet" },
+    { img: "imgs/k11.webp", name: "SBO Bet" },
+    { img: "imgs/k12.webp", name: "SBO Bet" },
+    { img: "imgs/k13.webp", name: "SBO Bet" },
+    { img: "imgs/k14.webp", name: "SBO Bet" },
+    { img: "imgs/k15.webp", name: "SBO Bet" },
+    { img: "imgs/k16.webp", name: "SBO Bet" },
+    { img: "imgs/k17.webp", name: "SBO Bet" },
+    { img: "imgs/k18.webp", name: "SBO Bet" },
+    { img: "imgs/k19.webp", name: "SBO Bet" },
+    { img: "imgs/k20.webp", name: "SBO Bet" },
+    { img: "imgs/k21.webp", name: "SBO Bet" },
+    { img: "imgs/k22.webp", name: "SBO Bet" },
+    { img: "imgs/k23.webp", name: "SBO Bet" },
+  ],
+  p2p: [
+    { img: "imgs/p1.webp", name: "SBO Bet" },
+    { img: "imgs/p2.webp", name: "SBO Bet" },
+    { img: "imgs/p3.webp", name: "SBO Bet" },
+    { img: "imgs/p4.webp", name: "SBO Bet" },
+    { img: "imgs/p5.webp", name: "SBO Bet" },
+    { img: "imgs/p6.webp", name: "SBO Bet" },
+    { img: "imgs/p7.webp", name: "SBO Bet" },
+    { img: "imgs/p8.webp", name: "SBO Bet" },
+    { img: "imgs/p9.webp", name: "SBO Bet" },
+    { img: "imgs/p10.webp", name: "SBO Bet" },
+    { img: "imgs/p11.webp", name: "SBO Bet" },
+  ],
+  fish: [
+    { img: "imgs/t1.webp", name: "SBO Bet" },
+    { img: "imgs/t2.webp", name: "SBO Bet" },
+    { img: "imgs/t3.webp", name: "SBO Bet" },
+    { img: "imgs/t4.webp", name: "SBO Bet" },
+    { img: "imgs/t5.webp", name: "SBO Bet" },
+    { img: "imgs/t6.webp", name: "SBO Bet" },
+    { img: "imgs/t7.webp", name: "SBO Bet" },
+    { img: "imgs/t8.webp", name: "SBO Bet" },
+    { img: "imgs/t9.webp", name: "SBO Bet" },
+    { img: "imgs/t10.webp", name: "SBO Bet" },
+    { img: "imgs/t11.webp", name: "SBO Bet" },
+  ],
+  toggle: [
+    { img: "imgs/o1.webp", name: "SBO Bet" },
+    { img: "imgs/o2.webp", name: "SBO Bet" },
+    { img: "imgs/o3.webp", name: "SBO Bet" },
+    { img: "imgs/o4.webp", name: "SBO Bet" },
+    { img: "imgs/o5.webp", name: "SBO Bet" },
+    { img: "imgs/o6.webp", name: "SBO Bet" },
+    { img: "imgs/o7.webp", name: "SBO Bet" },
+    { img: "imgs/o8.webp", name: "SBO Bet" },
+    { img: "imgs/o9.webp", name: "SBO Bet" },
+    { img: "imgs/o10.webp", name: "SBO Bet" },
+    { img: "imgs/o11.webp", name: "SBO Bet" },
+  ],
+  games: [
+    { img: "imgs/ga1.webp", name: "SBO Bet" },
+    { img: "imgs/ga2.webp", name: "SBO Bet" },
+    { img: "imgs/ga3.webp", name: "SBO Bet" },
+    { img: "imgs/ga4.webp", name: "SBO Bet" },
+    { img: "imgs/ga5.webp", name: "SBO Bet" },
+    { img: "imgs/ga6.webp", name: "SBO Bet" },
+    { img: "imgs/ga7.webp", name: "SBO Bet" },
+    { img: "imgs/ga8.webp", name: "SBO Bet" },
+    { img: "imgs/ga9.webp", name: "SBO Bet" },
+    { img: "imgs/ga10.webp", name: "SBO Bet" },
+    { img: "imgs/ga11.webp", name: "SBO Bet" },
+    { img: "imgs/ga12.webp", name: "SBO Bet" },
+    { img: "imgs/ga13.webp", name: "SBO Bet" },
+    { img: "imgs/ga14.webp", name: "SBO Bet" },
+    { img: "imgs/ga15.webp", name: "SBO Bet" },
+    { img: "imgs/ga16.webp", name: "SBO Bet" },
+  ],
 };
 
-document.querySelectorAll(".menu-item").forEach((item) => {
-  item.addEventListener("mouseenter", () => {
-    const type = item.getAttribute("data-target");
-    megaMenu.innerHTML = menuData[type]
-      .map(
-        (x) =>
-          `<div class="mega-item"><img src="${x.img}"><span>${x.name}</span></div>`
-      )
-      .join("");
+// Function to check if we're on mobile
+function isMobile() {
+  return window.innerWidth <= 768;
+}
 
-    megaMenu.classList.add("show-menu");
+// Initialize event listeners
+function initMegaMenu() {
+  menuItems.forEach((item) => {
+    item.addEventListener("mouseenter", (e) => {
+      // Don't show mega menu on mobile
+      if (isMobile()) return;
+
+      const type = item.getAttribute("data-target");
+      megaMenu.innerHTML = menuData[type]
+        .map(
+          (x) =>
+            `<div class="mega-item"><img src="${x.img}"><span>${x.name}</span></div>`
+        )
+        .join("");
+
+      megaMenu.classList.add("show-menu");
+    });
+
+    // For touch devices, prevent default on mobile
+    item.addEventListener("touchstart", (e) => {
+      if (isMobile()) {
+        e.preventDefault(); // Prevent mega menu from opening on mobile
+      }
+    });
   });
-});
 
-document.querySelector(".second-nav").addEventListener("mouseleave", () => {
-  megaMenu.classList.remove("show-menu");
+  document.querySelector(".second-nav").addEventListener("mouseleave", () => {
+    // Only hide if not on mobile
+    if (!isMobile()) {
+      megaMenu.classList.remove("show-menu");
+    }
+  });
+}
+
+// Initialize on load
+initMegaMenu();
+
+// Optional: Update on resize to ensure correct behavior
+window.addEventListener("resize", function () {
+  // Hide mega menu if it's open when resizing to mobile
+  if (isMobile() && megaMenu.classList.contains("show-menu")) {
+    megaMenu.classList.remove("show-menu");
+  }
 });
 document.addEventListener("DOMContentLoaded", function () {
   // Slider functionality (existing code)
