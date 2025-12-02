@@ -2178,11 +2178,11 @@ body .top-bar {
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.payment-methods img:hover {
+/* .payment-methods img:hover {
   background: rgba(255, 255, 255, 0.15);
   border-color: rgba(255, 215, 0, 0.3);
   transform: translateY(-2px);
-}
+} */
 
 /* Footer Middle */
 .footer-middle {
